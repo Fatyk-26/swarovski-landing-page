@@ -5,8 +5,10 @@ box-sizing: border-box;
 }
 
 body{
-height: 7000px;
+body{
 font-family: Georgia, 'Times New Roman', Times, serif;
+overflow-x: hidden;
+}
 }
 /*----------------------------------SECTION ONE-------------------------------------*/
 .header{
@@ -70,7 +72,7 @@ nav{
     left: 8px;
 }
 
-/* HERO SECTION */
+
 .hero-section{
     width: 100%;
     height: 100vh;
@@ -135,6 +137,15 @@ nav{
 
 .btn:hover{
     opacity: 0.8;
+}
+
+
+.menu-icon{
+    display: none;
+    font-size: 28px;
+    margin-top: 10px;
+    color: white;
+    cursor: pointer;
 }
 
 /*----------------------------------SECTION TWO-------------------------------------*/
@@ -399,7 +410,6 @@ background-color: rgb(245, 198, 207);
 }
 
 /*----------------------------------SECTION FIVE-------------------------------------*/
-
 .chooseus{
 width: 100%;
     height: 100vh;
@@ -476,9 +486,8 @@ background-color: rgb(233, 205, 220);
 /*----------------------------------SECTION SIX-------------------------------------*/
 .stats-section{
     width: 100%;
-    height: 380px;
+    min-height: 380px;
     position: relative;
-
     background-image: url(../images/swar6.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -638,7 +647,7 @@ background-color: rgb(233, 205, 220);
 /*----------------------------------SECTION EIGHT-------------------------------------*/
 .team-section{
     width: 100%;
-    height: 400px;
+    min-height: 400px;
     background-image: url(../images/swar7.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -938,7 +947,6 @@ background-color: rgb(233, 205, 220);
 
 .footer-logo img{
     width: 170px;
-
     margin-bottom: 15px;
 }
 
@@ -988,14 +996,338 @@ background-color: rgb(233, 205, 220);
 }
 
 
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px){
+/* =============RESET SECTION ============= */
+*{
+    max-width: 100%;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============= SECTION 1 ============= */
+.header{
+    padding: 0 15px;
+    justify-content: space-between;
+}
+
+.nav-list,
+.search-box{
+    display: none;
+}
+
+.menu-icon{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 2px;
+}
+
+/* ============= SECTION 1 CONT... =============*/
+.hero-content{
+    width: 90%;
+}
+
+.hero-content h2{
+    font-size: 28px;
+    line-height: 1.4;
+}
+
+.hero-content p{
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.hero-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn{
+    width: 220px;
+}
+
+/* ============== SECTION 2 ============= */
+.features{
+    height: auto;
+    padding: 80px 0;
+}
+
+.features-container{
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.feature-card{
+    width: 90%;
+    height: auto;
+    padding: 40px 20px;
+}
+
+.feature-card i{
+    position: static;
+    margin-bottom: 20px;
+}
+
+/* ============== SECTION 3 ============= */
+.gallery{
+    height: auto;
+    padding: 80px 0;
+}
+
+.gallery-container{
+    position: static;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.gallery-card{
+    width: 90%;
+    float: none;
+}
+
+.gallery-card img{
+    width: 100%;
+}
+
+.gallery-overlay{
+    padding: 20px;
+}
+
+/* ============== SECTION 4 ============= */
+.services{
+    height: auto;
+    padding: 80px 0;
+}
+
+.services-container{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card{
+    width: 90%;
+    height: auto;
+    padding: 50px 20px 30px;
+}
+
+.service-icon{
+    position: static;
+    transform: none;
+    margin-bottom: 20px;
+}
+
+.gallery-card img,
+.news-card img{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+/* ============== SECTION 5 ============= */
+.chooseus{
+    height: auto;
+    flex-direction: column;
+    padding: 80px 20px;
+}
+
+.choose-text{
+    width: 100%;
+    margin: 0;
+}
+
+.choose-image{
+    width: 100%;
+    margin-top: 40px;
+}
+
+.choose-image img{
+    width: 100%;
+    margin: 0;
+}
+
+.choose-dots{
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: center;
+}
+
+.choose-dots li{
+    float: none;
+}
+
+/* ============== SECTION 6 ============= */
+.stats-section{
+    height: auto !important;
+    padding: 80px 0 !important;
+    background-attachment: scroll !important;
+}
+.stats-overlay{
+    position: static !important;
+    padding: 40px 0;
+}
+
+.stats-container{
+    width: 90%;
+    margin: auto;
+}
+
+.stats-items{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center;
+    gap: 50px !important;
+    padding-top: 0 !important;
+}
+
+.stats-item{
+    width: 100% !important;
+    text-align: center;
+    float: none !important;
+
+}
+
+/* ============== SECTION 7 ============= */
+.pricing{
+    min-height: auto;
+    padding: 80px 0;
+}
+
+.pricing-container{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.pricing-card{
+    width: 90%;
+    height: auto;
+    padding-bottom: 30px;
+}
 
 
+/* ============== SECTION 8 ============= */
+.team-section{
+    height: auto !important;
+    padding: 80px 0 !important;
+    background-attachment: scroll !important;
+}
 
+.team-container{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 60px !important;
+}
 
+.team-member{
+    width: 90% !important;
+    padding-top: 0 !important;
+    text-align: center;
+}
 
+.team-member-info{
+    text-align: center;
+}
 
+.team-member-info img{
+    margin: auto auto 20px auto;
+}
 
+.team-description{
+    margin-top: 20px;
+    line-height: 1.9;
+}
 
+/* ============== SECTION 9 ============= */
+.team-cards-section{
+    margin-top: 20px !important;
+    padding-top: 80px !important;
+}
 
+.team-cards-title{
+    padding-top: 0;
+}
+
+.team-cards-container{
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-card{
+    width: 90%;
+    height: auto;
+    padding-bottom: 25px;
+}
+
+.team-card-image img{
+    width: 85%;
+    height: auto;
+    margin: auto;
+}
+
+.team-card-icons{
+    right: 20px;
+}
+
+/* ============== SECTION 10 ============= */
+.news-section{
+    min-height: auto;
+    padding: 80px 0;
+}
+
+.news-title{
+    padding-top: 0;
+}
+
+.news-container{
+    flex-direction: column;
+    align-items: center;
+}
+
+.news-card{
+    width: 90%;
+}
+
+.news-card img{
+    width: 100%;
+    height: auto;
+     margin-top: 0 !important;
+    border-radius: 10px 10px 0 0;
+}
+
+/* ============== SECTION 11 ============= */
+.footer{
+    padding: 20px 20px;
+}
+
+.footer-description{
+    width: 100%;
+}
+
+.footer-social{
+    flex-wrap: wrap;
+}
+.footer-logo img{
+    margin-left: 70px;
+}
+
+}
 
 

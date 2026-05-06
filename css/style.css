@@ -1180,6 +1180,7 @@ img{
 .stats-overlay{
     position: static !important;
     padding: 40px 0;
+    
 }
 
 .stats-container{
@@ -1224,7 +1225,9 @@ img{
 
 /* ============== SECTION 8 ============= */
 .team-section{
+    min-height: 950px !important;
     height: auto !important;
+    overflow: hidden;
     padding: 80px 0 !important;
     background-attachment: scroll !important;
 }
@@ -1248,6 +1251,11 @@ img{
 
 .team-member-info img{
     margin: auto auto 20px auto;
+}
+
+.team-overlay{
+    height: 100% !important;
+    overflow: hidden;
 }
 
 .team-description{
@@ -1307,9 +1315,10 @@ img{
 
 .news-card img{
     width: 100%;
-    height: auto;
-     margin-top: 0 !important;
+    height: 300px;
+    margin-top: 0 !important;
     border-radius: 10px 10px 0 0;
+    object-fit: contain;
 }
 
 /* ============== SECTION 11 ============= */

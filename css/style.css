@@ -1,0 +1,1001 @@
+*{
+margin: 0; 
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+height: 7000px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/*----------------------------------SECTION ONE-------------------------------------*/
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(159, 148, 135);
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+}
+
+.im-header{
+    width: 90px;
+    height: 100%;
+    margin-left: 10px;
+}
+
+nav{
+    flex: 1;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-list a{
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(19, 15, 41);
+}
+
+.nav-list a:hover{
+    color: rgb(255, 255, 253);
+}
+
+.search-box{
+    position: relative;
+    margin-right: 30px;
+}
+
+.search{
+    width: 260px;
+    height: 30px;
+    border-radius: 18px;
+    border: 0;
+    padding-left: 28px;
+}
+
+.search-box i{
+    position: absolute;
+    color: gray;
+    top: 8px;
+    left: 8px;
+}
+
+/* HERO SECTION */
+.hero-section{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/backgroundswa.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.hero-content{
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.hero-content h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.hero-content p{
+    color: white;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding-top: 12px;
+}
+
+.hero-buttons{
+    margin-top: 12px;
+}
+
+.btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 7px;
+    text-transform: capitalize;
+    text-decoration: none;
+    background-color: rgb(223, 216, 216);
+    color: black;
+}
+
+.btn-secondary{
+    background-color: rgb(159, 148, 135);
+    
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+/*----------------------------------SECTION TWO-------------------------------------*/
+.features{
+width: 100%;
+height: 100vh;
+ padding: 60px 0;
+}
+
+.section-title{
+text-align: center;
+font-size: 32px;
+margin: 92px 0px 12px 0px;
+}
+
+.line{
+width: 130px;
+margin: auto;
+height: 4px;
+background-color: rgb(159, 148, 135);
+}
+
+.features-container{
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    margin-top: 60px;
+}
+
+.feature-card{
+position: relative;
+width: 270px;
+height: 250px;
+text-align: center;
+border-radius: 20px;
+border: 1px solid black;
+padding-top: 50px;
+}
+
+.feature-card h3{
+padding-top: 20px;
+font-size: 12px;
+line-height: 18px
+}
+
+.feature-card i{
+position: absolute;
+top:17px;
+left: 110px;
+font-size: 30px;
+color: rgb(146, 121, 95);
+}
+
+.feature-card p{
+padding-top: 12px;
+}
+
+.read-more{
+display: block;
+text-decoration: none;
+font-style: italic; 
+font-weight: bold;
+padding-top: 16px;
+color: rgb(146, 121, 95);
+}
+
+.feature-card:after{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+height: 0;
+width: 0;
+background-color: rgb(189, 165, 139);
+transition: .7s;
+opacity: 0;
+}
+
+.feature-card:hover::after{
+width: 100%;
+height: 100%;
+border-radius: 20px;
+opacity: 0.2;
+}
+
+.feature-card:hover i {
+color: black;
+}
+
+.feature-card:hover a {
+color: black;
+}
+
+/*----------------------------------SECTION Three-------------------------------------*/
+.gallery{
+width: 100%;
+height: 100vh;
+background-color: rgba(226, 182, 135, 0.1);
+position: relative;
+}
+
+.gallery-title{
+text-align: center;
+color: rgb(46, 24, 28);
+font-size: 35px;
+margin-top: 42px;
+}
+
+.gallery-line{
+width: 130px;
+margin: auto;
+height: 4px;
+margin-top: 12px;
+background-color: rgb(159, 148, 135);
+}
+
+.gallery-container{
+    width: 80%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-top: 9px;
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.gallery-card{
+position: relative;
+float: left;
+margin-top: 30px;
+}
+
+.gallery-overlay{
+padding-top: 32px;
+position: absolute;
+background-color: rgba(0,0,0,0.5);
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+visibility: hidden;
+transition: .1s;
+text-align: center;
+}
+
+.gallery-card:hover .gallery-overlay{
+opacity: 1;
+visibility: visible;
+}
+
+.gallery-card-title{
+font-size: 24px;
+text-transform: uppercase;
+color: rgb(249, 240, 242);
+line-height: 42px;
+}
+
+.gallery-text{
+line-height: 52px;
+font-size: 16px;
+color: white;
+}
+
+.gallery-icons i{ 
+width: 45px;
+height: 30px;
+border-radius: 8px;
+font-size: 19px;
+padding-top: 5px;
+color: rgb(82, 71, 71);
+background-color: rgb(245, 198, 207);
+}
+
+/*----------------------------------SECTION FOUR-------------------------------------*/
+.services{
+    width: 100%;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.services-title{
+    font-size: 38px;
+    color: rgb(72, 61, 50);
+    text-transform: capitalize;
+}
+
+.services-line{
+    width: 130px;
+    height: 4px;
+    background-color: rgb(159, 148, 135);
+    margin: 12px auto 0;
+}
+
+.services-container{
+    width: 1000px; 
+    margin: 60px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+.service-card{
+    position: relative;
+    text-align: center;
+    width: 290px;
+    height: 180px;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding-top: 56px;
+    margin-bottom: 40px;
+}
+
+.service-icon{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: rgb(146, 121, 95);
+}
+
+.services-container p{
+    margin-top: 3px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.services-container h3{
+    color: rgb(72, 61, 50);
+    font-size: 20px;
+}
+
+.service-card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    background-color: rgb(189, 165, 139);
+    transition: .7s;
+    opacity: 0;
+}
+
+.service-card:hover::after{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    opacity: 0.2;
+}
+
+.service-card:hover i{
+    color: rgb(97, 94, 94);
+}
+
+.service-card:hover h3{
+    color: rgb(125, 87, 44);
+}
+
+/*----------------------------------SECTION FIVE-------------------------------------*/
+
+.chooseus{
+width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+}
+.choose-text{
+width: 50%;
+margin: 5px 0px 0px 150px;
+}
+
+.choose-title{
+font-size: 38px;
+color: rgb(72, 61, 50);
+text-transform: capitalize;
+}
+
+.choose-line{
+width: 100px;
+height: 4px;
+background-color: rgb(159, 148, 135);
+margin: 10px 0px 30px 0px;
+}
+
+.choose-image img{
+margin-top: 10px ;
+margin-left: 50px ;
+width: 370px;
+height: 430px;
+}
+
+.choose-desc{
+line-height: 30px;
+margin-bottom: 20px;
+}
+
+.choose-list li{
+list-style: none;
+line-height: 35px;
+}
+
+.choose-list i{
+color: rgb(106, 93, 79);
+padding-right: 10px;
+}
+
+.choose-dots{
+list-style: none;
+margin-right: 260px;
+overflow: hidden;
+}
+
+.choose-dots li{
+width: 17px;
+height: 17px;
+border-radius: 50%;
+background-color: silver;
+margin: 10px 0px 0px 12px;
+float: right;
+}
+
+.choose-dots li.active{
+background-color:  rgb(106, 93, 79) ;
+}
+
+.choose-dots li:hover {
+background-color: rgb(233, 205, 220);
+}
+
+
+
+/*----------------------------------SECTION SIX-------------------------------------*/
+.stats-section{
+    width: 100%;
+    height: 380px;
+    position: relative;
+
+    background-image: url(../images/swar6.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.stats-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.stats-container{
+    width: 80%;
+    margin: auto;
+}
+
+.stats-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 150px;
+}
+
+.stats-item{
+    text-align: center;
+    width: 25%;
+}
+
+.stats-icon{
+    font-size: 42px;
+    color: rgb(233, 205, 220);
+}
+
+.stats-number{
+    color: white;
+    padding-top: 12px;
+    font-size: 18px;
+}
+
+.stats-text{
+    color: white;
+    font-size: 18px;
+}
+/*----------------------------------SECTION SEVEN-------------------------------------*/
+.pricing{
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 100px;
+}
+
+.pricing-title{
+    text-align: center;
+    font-size: 38px;
+    color: rgb(72, 61, 50);
+}
+
+.pricing-line{
+    width: 100px;
+    height: 4px;
+    background-color: rgb(159, 148, 135);
+    margin: 12px auto;
+}
+
+.pricing-container{
+    width: 80%;
+    margin: 60px auto 0;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    text-align: center;
+}
+
+.pricing-card{
+    position: relative;
+    width: 300px;
+    height: 380px;
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+.pricing-card-title{
+    padding-top: 40px;
+    font-size: 20px;
+    color: rgb(152, 108, 68);
+}
+
+.price-circle{
+    width: 90px;
+    height: 90px;
+    border: 1px solid rgb(152, 108, 68);
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+.price-circle h3{
+    font-size: 28px;
+    padding-top: 24px;
+}
+
+.price-circle span{
+    font-size: 18px;
+}
+
+.pricing-list{
+    list-style: none;
+}
+
+.pricing-list li{
+    line-height: 28px;
+    padding-bottom: 12px;
+}
+
+.pricing-btn{
+    width: 140px;
+    height: 35px;
+    border: 1px solid rgb(152, 108, 68);
+    border-radius: 12px;
+    background-color: white;
+     color: rgb(60, 44, 28);
+    font-weight: bold;
+}
+
+.pricing-card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgb(189, 165, 139);
+    opacity: 0;
+    transition: .7s;
+}
+
+.pricing-card:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    border-radius: 12px;
+}
+
+.pricing-card:hover .price-circle{
+    border: 1px solid black;
+}
+
+.pricing-card:hover .pricing-card-title{
+    color: black;
+}
+
+.pricing-card:hover .pricing-btn{
+    border: 1px solid black;
+}
+
+/*----------------------------------SECTION EIGHT-------------------------------------*/
+.team-section{
+    width: 100%;
+    height: 400px;
+    background-image: url(../images/swar7.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    margin-top: 130px;
+}
+
+.team-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.team-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.team-member{
+    width: 48%;
+    padding-top: 60px;
+
+    text-align: center;
+}
+
+.team-member-info{
+    line-height: 1.6;
+}
+
+.team-member-info img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-name{
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+.team-role{
+    color: rgb(236, 222, 204);
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.team-description{
+    line-height: 1.7;
+    font-size: 15px;
+
+    margin-top: 20px;
+}
+
+/*----------------------------------SECTION NINE-------------------------------------*/
+.team-cards-section{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.team-cards-title{
+    padding-top: 150px;
+    text-align: center;
+    font-size: 38px;
+    color: rgb(72, 61, 50);
+}
+
+.team-cards-line{
+    width: 100px;
+    height: 4px;
+    background-color: rgb(159, 148, 135);
+    margin: 12px auto;
+}
+
+.team-cards-container{
+    width: 80%;
+    margin: 40px auto 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.team-card{
+    position: relative;
+    width: 330px;
+    height: 300px;
+    background-color: rgba(200, 193, 165, 0.838);
+    text-align: center;
+}
+
+.team-card-image{
+    position: relative;
+}
+
+.team-card-image img{
+    width: 270px;
+    height: 220px;
+    padding-top: 40px;
+}
+
+.team-card-icons{
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    width: 30px;
+    height: 110px;
+    background-color: rgb(92, 80, 65);
+    opacity: 0;
+    visibility: hidden;
+    transition: 1.5s;
+}
+
+.team-card-icons a{
+    color: white;
+    font-size: 25px;
+    display: block;
+    padding-top: 5px;
+}
+
+.team-card-info{
+    padding-top: 6px;
+    line-height: 32px;
+}
+
+.team-card-name{
+    font-size: 16px;
+}
+
+.team-card-role{
+    color: rgb(72, 61, 50);
+}
+
+
+.team-card:hover .team-card-icons{
+    visibility: visible;
+    opacity: 0.5;
+}
+
+.team-card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: rgba(90, 70, 60, 0.35);
+    opacity: 0;
+    transition: .9s;
+}
+
+.team-card:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.team-card::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+   background-color: rgba(50, 40, 35, 0.35);
+    opacity: 0;
+    transition: .9s;
+}
+
+.team-card:hover::before{
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+
+.team-card:hover .team-card-info{
+    color: rgb(93, 79, 67);
+}
+
+/*----------------------------------SECTION TEN-------------------------------------*/
+.news-section{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.news-title{
+    text-align: center;
+    font-size: 38px;
+    color: rgb(72, 61, 50);
+    padding-top: 100px;
+}
+
+.news-line{
+    width: 100px;
+    height: 4px;
+    background-color: rgb(159, 148, 135);
+    margin: 12px auto;
+}
+
+.news-container{
+    width: 80%;
+    margin: 40px auto 0;
+    display: flex;
+    justify-content: center;
+    gap: 34px;
+}
+
+.news-card{
+    position: relative;
+    width: 30%;
+    border: 1px solid rgb(180, 114, 94);
+    border-radius: 10px;
+    text-align: center;
+    line-height: 26px;
+    overflow: hidden;
+}
+
+.news-card img{
+    width: 250px;
+    height: 250px;
+
+    margin-top: 20px;
+}
+
+.news-meta ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.news-meta li{
+    font-size: 14px;
+}
+
+.news-meta i{
+    color: rgb(174, 137, 118);
+    margin-right: 4px;
+}
+
+.news-role{
+    margin: 25px 0px 12px 0px;
+    color: rgb(71, 46, 33);
+}
+
+.news-description{
+    color: rgb(81, 57, 45);
+    padding: 0 15px;
+}
+
+.news-link{
+    display: inline-block;
+    margin: 18px 0px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.news-card::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    left: 0;
+    top: 0;
+    background-color: rgba(120, 100, 85, 0.35);
+    transition: .7s;
+    opacity: 0;
+}
+
+.news-card:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+
+/*----------------------------------SECTION 11-------------------------------------*/
+.footer{
+    width: 100%;
+    background-color: rgb(239, 231, 222);
+
+    margin-top: 100px;
+
+    padding: 25px 0;
+}
+
+.footer-container{
+    width: 80%;
+    margin: auto;
+
+    text-align: center;
+}
+
+.footer-logo img{
+    width: 170px;
+
+    margin-bottom: 15px;
+}
+
+.footer-description{
+    width: 55%;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 15px;
+    color: rgb(88, 75, 75);
+}
+
+.footer-social{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-social li{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: rgb(163, 142, 120);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+}
+
+.footer-social a{
+    color: white;
+    font-size: 22px;
+}
+
+.footer-social li:hover{
+    background-color: rgb(92, 82, 65);
+    transform: translateY(-5px);
+}
+
+.footer-copy{
+    margin-top: 20px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgb(88, 75, 75);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
